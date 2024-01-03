@@ -1,6 +1,6 @@
 <html>
     <head>
-            <title> this is the title of the page</title>
+            <title> {{title}} {{meow}}</title>
     </head>
 
     <body>
@@ -15,5 +15,31 @@
                 </blockquote>
             </div>
         </div>
+        {% for i in loop  %}
+
+              <div>{{i}}</div> 
+        {% endfor %}
+
+        <table border= 1>
+             <thead>
+                <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                {% for d in di_list %}
+                <tr>
+                    <td>{{d.name}}</td>
+                    <td>{{d.num}}</td>
+                </tr>
+                {% endfor %}
+                
+                
+            </tbody>
+        </table>
+
+
     </body>
 </html>
