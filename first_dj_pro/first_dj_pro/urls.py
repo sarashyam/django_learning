@@ -21,5 +21,8 @@ from first_dj_pro import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about-us/',views.aboutUs)
+    path('about-us/',views.aboutUs),
+    path('course/',views.course),
+    path('course/<slug:courseid>',views.courseDetails)
+    
 ]
